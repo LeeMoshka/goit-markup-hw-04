@@ -142,7 +142,7 @@ body {
 
 .contacts {
   display: flex;
-  margin-left: 331px;
+  margin-left: 305px;
   align-items: center;
   text-align: center;
   list-style-type: none;
@@ -152,8 +152,27 @@ body {
   display: block;
   flex-direction: row;
 }
-.item {
-  margin-right: 50px;
+.item:not(:last-child) {
+  margin-right: 30px;
+}
+.mail-link.item::before {
+  display: inline-flex;
+  content: " ";
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../img/studio-\ optimized-pic/envelope.svg);
+  background-repeat: no-repeat;
+}
+.phone-link.item::before {
+  content: "";
+  display: inline-flex;
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+
+  background-repeat: no-repeat;
+  background-image: url(../img/studio-\ optimized-pic/vector.png);
 }
 
 .mail-link.item {
@@ -282,6 +301,15 @@ body {
 .title-list-item:nth-child(1)::before {
   background-image: url(../img/studio-\ optimized-pic/antenna.png);
 }
+.title-list-item:nth-child(2)::before {
+  background-image: url(../img/studio-\ optimized-pic/clock1.png);
+}
+.title-list-item:nth-child(3)::before {
+  background-image: url(..//img/studio-\ optimized-pic/diagram1.png);
+}
+.title-list-item:nth-child(4)::before {
+  background-image: url(..//img/studio-\ optimized-pic/astronaut.png);
+}
 .title-list-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -387,6 +415,51 @@ body {
   padding: 30px 32px;
   background-color: #fff;
 }
+
+/***Постоянные клиенты***/
+
+.customers {
+  display: block;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.customers-container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.title-customers {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.167;
+  text-align: center;
+  padding-bottom: 50px;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+}
+.customer {
+  display: flex;
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.list-customers {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+}
+.list-customers-item:not(:last-child) {
+  margin-right: 30px;
+}
+.list-customers-item {
+  border: 1px solid #afb1b8;
+}
+.list-customers-img {
+  display: block;
+  background-position: center;
+  background-size: contain;
+}
 /*****end-studio*****/
 
 /******hero portfolio******/
@@ -488,6 +561,7 @@ body {
 .block-description {
   margin-bottom: 30px;
 }
+
 /****** end hero portfolio******/
 
 /*****footer*****/
